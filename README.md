@@ -50,7 +50,7 @@ The following screenshots are sanitized evidence from the investigation. The web
 
 ### 1. Initial smishing SMS
 
-![Sanitized SMS showing the impersonation attempt](01_sms_sanitizada.png)
+![Initial smishing SMS showing the Millennium BCP impersonation attempt](01_sms_completo.png)
 
 **SMS transcription (defanged):**
 
