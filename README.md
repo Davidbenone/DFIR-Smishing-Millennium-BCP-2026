@@ -44,6 +44,44 @@ The English public report and sanitized evidence images are available in this re
 
 Never upload the confidential report, raw packet captures, bot token, Telegram chat ID, or unredacted source code.
 
+## Visual evidence - investigation timeline
+
+The following screenshots are sanitized evidence from the investigation. The website screens were revealed by local DOM visibility changes, not by submitting personal information.
+
+### 1. Initial smishing SMS
+
+![Sanitized SMS showing the impersonation attempt](01_sms_sanitizada.png)
+
+### 2. Website screen 1 - name and mobile phone
+
+![Phishing screen requesting name and mobile phone](02_ecra_nome_telemovel.png)
+
+### 3. Website screen 2 - fake anti-fraud warning
+
+![Fake bank fraud prevention screen](03_ecra_antifraude.png)
+
+### 4. Website screen 3 - Portuguese taxpayer number (NIF)
+
+![Phishing screen requesting a Portuguese taxpayer number](04_ecra_nif.png)
+
+### 5. Website screen 4 - fake validation confirmation
+
+![Fake validation completion screen](05_ecra_validacao.png)
+
+### 6. Wireshark evidence - capture 1
+
+![Sanitized Wireshark capture 1](06_wireshark_captura_1_sanitizada.png)
+
+### 7. Wireshark evidence - capture 2
+
+![Sanitized Wireshark capture 2](07_wireshark_captura_2_sanitizada.png)
+
+### 8. Wireshark evidence - capture 3
+
+![Sanitized Wireshark capture 3](08_wireshark_captura_3_sanitizada.png)
+
+**Evidence interpretation:** Network captures do not demonstrate successful Telegram exfiltration. The presence of JavaScript capable of sending information is not proof that the transmission occurred.
+
 ## Researcher
 
 VirusTotal public comments: [DavidB3_1](https://www.virustotal.com/gui/user/DavidB3_1/comments).
