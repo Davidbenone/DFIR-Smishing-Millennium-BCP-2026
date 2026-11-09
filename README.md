@@ -36,9 +36,15 @@ The four website screens were inspected by **locally changing DOM element visibi
 - QUIC traffic associated with an IP observed during the investigation was captured.
 - **Not confirmed:** successful Telegram exfiltration, operator identity, SMS sender authenticity, number of victims or banking losses.
 
-## Reports and evidence
+## Repository navigation
 
+- [Investigation methodology and evidence handling](methodology.md)
+- [Network analysis and interpretation](network-analysis.md)
+- [Indicators of compromise and detection notes](iocs.md)
 - [Public DFIR report (English)](Relatorio_DFIR_Public_EN.pdf)
+- [Portuguese summary](README_PT.md)
+
+## Reports and evidence
 
 The English public report and sanitized evidence images are available in this repository. Only sanitized images and evidence derivatives should be published.
 
@@ -56,7 +62,7 @@ The following screenshots are sanitized evidence from the investigation. The web
 
 > Transferencia de 1.472,00 EUR pendente. Caso nao reconheca: consultar hxxps://millennium[.]analisar-pt[.]com
 
-The transcription preserves the full message and suspicious domain while preventing accidental navigation. The screenshot remains sanitized.
+The transcription records the suspicious domain in defanged form. The screenshot is reproduced as an investigation artifact; do not visit the destination.
 
 ### 2. Website screen 1 - name and mobile phone
 
