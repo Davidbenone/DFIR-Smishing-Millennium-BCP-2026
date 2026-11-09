@@ -52,6 +52,12 @@ The following screenshots are sanitized evidence from the investigation. The web
 
 ![Sanitized SMS showing the impersonation attempt](01_sms_sanitizada.png)
 
+**SMS transcription (defanged):**
+
+> Transferencia de 1.472,00 EUR pendente. Caso nao reconheca: consultar hxxps://millennium[.]analisar-pt[.]com
+
+The transcription preserves the full message and suspicious domain while preventing accidental navigation. The screenshot remains sanitized.
+
 ### 2. Website screen 1 - name and mobile phone
 
 ![Phishing screen requesting name and mobile phone](02_ecra_nome_telemovel.png)
