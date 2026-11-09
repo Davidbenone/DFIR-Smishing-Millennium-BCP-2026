@@ -39,9 +39,8 @@ The four website screens were inspected by **locally changing DOM element visibi
 ## Reports and evidence
 
 - [Public DFIR report (English)](Relatorio_DFIR_Public_EN.pdf)
-- [Public DFIR report (Portuguese)](Relatorio_DFIR_Publico_VirusTotal_PT_PT.pdf)
 
-Report links will work after the corresponding PDFs are uploaded. Only sanitized images and evidence derivatives should be published.
+The English public report and sanitized evidence images are available in this repository. Only sanitized images and evidence derivatives should be published.
 
 Never upload the confidential report, raw packet captures, bot token, Telegram chat ID, or unredacted source code.
 
