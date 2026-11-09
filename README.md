@@ -1,4 +1,4 @@
-# DFIR — Smishing com personificação do Millennium BCP (Portugal, 2026)
+# DFIR - Smishing com personificação do Millennium BCP (Portugal, 2026)
 
 > Investigação independente para fins defensivos e educativos. Sem afiliação com o Millennium BCP.
 
