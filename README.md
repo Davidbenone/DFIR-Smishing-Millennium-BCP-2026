@@ -1,55 +1,60 @@
-# DFIR - Smishing com personificação do Millennium BCP (Portugal, 2026)
+# DFIR Investigation: Millennium BCP Impersonation Smishing (Portugal, 2026)
 
-> Investigação independente para fins defensivos e educativos. Sem afiliação com o Millennium BCP.
+> Independent security investigation for defensive and educational purposes. Not affiliated with Millennium BCP.
 
-## Resumo executivo
+## Executive summary
 
-Em **9 de novembro de 2026**, foi recebida uma SMS apresentada como «MILLENNIUM», alegando uma transferência pendente de **1 472 €** e encaminhando para um domínio suspeito. A análise identificou quatro ecrãs de um website que solicitava nome, telemóvel e NIF, utilizando uma narrativa de validação antifraude.
+On **9 November 2026**, an SMS displayed as sent by “MILLENNIUM” claimed that a **EUR 1,472** bank transfer was pending and directed the recipient to a suspicious website. Four website screens were examined. They presented a purported fraud prevention process and requested a name, mobile phone number and Portuguese taxpayer identification number (NIF).
 
-O JavaScript analisado contém lógica concebida para enviar informação à API de bots do Telegram. **Não foi demonstrada exfiltração efetiva para o Telegram.**
+The JavaScript source contained functions designed to transmit collected data using the Telegram Bot API. **Actual data exfiltration to Telegram was not demonstrated.**
 
-## Indicadores de compromisso (neutralizados)
+## Defanged indicators of compromise
 
-| Tipo | Indicador |
+| Type | Indicator |
 | --- | --- |
-| URL | `hxxps://millennium[.]analisar-pt[.]com/` |
-| Vetor | SMS / smishing |
-| Personificação | Millennium BCP |
+| Suspicious URL | `hxxps://millennium[.]analisar-pt[.]com/` |
+| Observed IP | `104[.]21[.]59[.]220` (shared infrastructure; attribution not established) |
+| Delivery method | SMS / smishing |
+| Impersonated institution | Millennium BCP |
 
-**Não visitar o endereço suspeito fora de ambiente de análise controlado.**
+Do not browse the suspicious website outside a controlled analysis environment.
 
-## Metodologia e ambiente
+## Investigation environment and methods
 
-- Máquina virtual VirtualBox, firewall OPNsense, Firefox Developer Tools e Wireshark.
-- Inspeção de HTML e JavaScript, capturas de ecrã e análise de tráfego.
-- Os quatro ecrãs do website foram observados por alteração **local** da visibilidade dos elementos DOM.
-- Não foram introduzidos dados pessoais reais nem submetidos deliberadamente formulários.
+- VirtualBox virtual machine and OPNsense firewall.
+- Firefox Developer Tools for HTML, JavaScript and DOM inspection.
+- Wireshark for network capture review.
+- SingleFile HTML preservation and evidence screenshots.
+- SHA-256 hashes for source evidence integrity checks.
 
-A manipulação visual do DOM **não equivale** à execução do fluxo funcional do website.
+The four website screens were inspected by **locally changing DOM element visibility**. No real personal information was entered and no forms were deliberately submitted. Displaying a hidden screen does **not** prove that the website's full interaction flow was executed.
 
-## Resultados e limitações
+## Findings and limitations
 
-- Evidência de uma interface destinada à recolha de dados pessoais sob pretexto bancário.
-- Código com mecanismo de envio para a API do Telegram.
-- Tráfego QUIC observado para infraestrutura associada ao domínio investigado.
-- **Não confirmado:** envio efetivo para o Telegram, identidade real dos operadores ou autenticidade do remetente SMS.
+- A suspicious banking themed interface requested personal data.
+- JavaScript contained routines intended to send information to Telegram.
+- QUIC traffic associated with an IP observed during the investigation was captured.
+- **Not confirmed:** successful Telegram exfiltration, operator identity, SMS sender authenticity, number of victims or banking losses.
 
-## Relatório público
+## Reports and evidence
 
-O relatório PDF sanitizado, `Relatorio_DFIR_Publico_VirusTotal_PT_PT.pdf`, está preparado para publicação separada após revisão final. Ainda não está anexado neste repositório.
+- [Public DFIR report (English)](Relatorio_DFIR_Public_EN.pdf)
+- [Public DFIR report (Portuguese)](Relatorio_DFIR_Publico_VirusTotal_PT_PT.pdf)
 
-**Não publicar:** relatório confidencial, PCAPs brutos, token de bot, Chat ID, HTML/JavaScript original com segredos ou imagens não sanitizadas.
+Report links will work after the corresponding PDFs are uploaded. Only sanitized images and evidence derivatives should be published.
 
-## Referenciais
+Never upload the confidential report, raw packet captures, bot token, Telegram chat ID, or unredacted source code.
 
-ISO/IEC 27037; ISO/IEC 27035; Regulamento (UE) 2016/679 (RGPD).
+## Researcher
 
-## Divulgação responsável
+VirusTotal public comments: [DavidB3_1](https://www.virustotal.com/gui/user/DavidB3_1/comments).
 
-Todos os indicadores nesta página estão neutralizados (*defanged*). O objetivo é partilhar metodologia e resultados de investigação, distinguindo observações, inferências e factos não demonstrados.
+## References
 
-## Perfil VirusTotal
+ISO/IEC 27037, ISO/IEC 27035, and Regulation (EU) 2016/679 (GDPR).
 
-- **Investigador:** [DavidB3_1 - comentários públicos no VirusTotal](https://www.virustotal.com/gui/user/DavidB3_1/comments)
+## Responsible disclosure
 
-Este perfil é indicado pelo autor da investigação. A ligação não implica que o VirusTotal tenha validado as conclusões deste relatório.
+This project distinguishes direct observations from technical interpretation and unproven hypotheses. Indicators are defanged to reduce accidental navigation to malicious infrastructure.
+
+[Versão em português](README_PT.md)
