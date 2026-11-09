@@ -50,6 +50,6 @@ Todos os indicadores nesta página estão neutralizados (*defanged*). O objetivo
 
 ## Perfil VirusTotal
 
-- **Investigador:** [DavidB3_1 — comentários públicos no VirusTotal](https://www.virustotal.com/gui/user/DavidB3_1/comments)
+- **Investigador:** [DavidB3_1 - comentários públicos no VirusTotal](https://www.virustotal.com/gui/user/DavidB3_1/comments)
 
 Este perfil é indicado pelo autor da investigação. A ligação não implica que o VirusTotal tenha validado as conclusões deste relatório.
